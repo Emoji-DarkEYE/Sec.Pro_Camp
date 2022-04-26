@@ -13,9 +13,10 @@ def keys_log(key):
         K_log = '----------------------------'
     elif K_log == "Key.esc":
         sys.exit()
-    
-    make_MES(K_log)
-
+    try:
+        make_MES(K_log)
+    except:
+        print("You must apply the changes to the tool")
 
 def make_MES(messege):
     try:
@@ -41,4 +42,4 @@ def make_MES(messege):
 try:
     run_key_log()
 except:
-    print("You must apply the changes to the tool")
+    print("ERROR")
